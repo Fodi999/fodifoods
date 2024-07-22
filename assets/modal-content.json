@@ -1,0 +1,45 @@
+{
+    "modals": [
+      {
+        "title": "Modal Title 1",
+        "description": "This is the modal description for card 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "image": "img/seafood1.webp"
+      },
+      {
+        "title": "Modal Title 2",
+        "description": "This is the modal description for card 2. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.",
+        "image": "img/seafood2.webp"
+      },
+      {
+        "title": "Modal Title 3",
+        "description": "This is the modal description for card 3. Proin nec urna eu arcu hendrerit pulvinar.",
+        "image": "img/seafood3.webp"
+      },
+      {
+        "title": "Modal Title 4",
+        "description": "This is the modal description for card 4. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat.",
+        "image": "img/seafood1.webp"
+      },
+      {
+        "title": "Modal Title 5",
+        "description": "This is the modal description for card 5. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.",
+        "image": "img/seafood2.webp"
+      },
+      {
+        "title": "Modal Title 6",
+        "description": "This is the modal description for card 6. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus.",
+        "image": "img/seafood3.webp"
+      },
+      {
+        "title": "Modal Title 7",
+        "description": "This is the modal description for card 7. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.",
+        "image": "img/seafood1.webp"
+      },
+      {
+        "title": "Modal Title 8",
+        "description": "This is the modal description for card 8. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "image": "img/seafood2.webp"
+      }
+    ]
+  }
+  

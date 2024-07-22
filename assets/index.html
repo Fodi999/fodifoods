@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="light-mode">
+    <nav>
+        <div class="burger-menu" id="burger-menu">
+            <i class='bx bx-menu'></i>
+        </div>
+        <ul id="nav-list" class="hidden">
+            <li><a href="#home" class="menu-icon"><i class='bx bx-home'></i></a></li>
+            <li><a href="https://instagram.com" target="_blank" class="menu-icon"><i class='bx bxl-instagram'></i></a></li>
+            <li><a href="https://telegram.org" target="_blank" class="menu-icon"><i class='bx bxl-telegram'></i></a></li>
+            <li><button id="theme-toggle" class="theme-toggle menu-icon">
+                <i id="theme-icon" class='bx bx-moon'></i>
+            </button></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>This is the home section.</p>
+        </section>
+        <section id="about">
+            <h2>About</h2>
+            <div class="card-grid">
+                <div class="card" data-title="Card Title 1" data-description="This is a description for card 1."
+                     data-image="img/seafood1.webp" data-modal-title="Modal Title 1" data-modal-description="This is the modal description for card 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                    <img src="img/seafood1.webp" alt="Sample Image 1">
+                    <div class="card-content">
+                        <h3>Card Title 1</h3>
+                        <p>This is a description for card 1.</p>
+                    </div>
+                </div>
+                <div class="card" data-title="Card Title 2" data-description="This is a description for card 2."
+                     data-image="img/seafood2.webp" data-modal-title="Modal Title 2" data-modal-description="This is the modal description for card 2. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.">
+                    <img src="img/seafood2.webp" alt="Sample Image 2">
+                    <div class="card-content">
+                        <h3>Card Title 2</h3>
+                        <p>This is a description for card 2.</p>
+                    </div>
+                </div>
+                <div class="card" data-title="Card Title 3" data-description="This is a description for card 3."
+                     data-image="img/seafood3.webp" data-modal-title="Modal Title 3" data-modal-description="This is the modal description for card 3. Proin nec urna eu arcu hendrerit pulvinar.">
+                    <img src="img/seafood3.webp" alt="Sample Image 3">
+                    <div class="card-content">
+                        <h3>Card Title 3</h3>
+                        <p>This is a description for card 3.</p>
+                    </div>
+                </div>
+                <div class="card" data-title="Card Title 4" data-description="This is a description for card 4."
+                     data-image="img/seafood1.webp" data-modal-title="Modal Title 4" data-modal-description="This is the modal description for card 4. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat.">
+                    <img src="img/seafood1.webp" alt="Sample Image 4">
+                    <div class="card-content">
+                        <h3>Card Title 4</h3>
+                        <p>This is a description for card 4.</p>
+                    </div>
+                </div>
+                <div class="card" data-title="Card Title 5" data-description="This is a description for card 5."
+                     data-image="img/seafood2.webp" data-modal-title="Modal Title 5" data-modal-description="This is the modal description for card 5. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.">
+                    <img src="img/seafood2.webp" alt="Sample Image 5">
+                    <div class="card-content">
+                        <h3>Card Title 5</h3>
+                        <p>This is a description for card 5.</p>
+                    </div>
+                </div>
+                <div class="card" data-title="Card Title 6" data-description="This is a description for card 6."
+                     data-image="img/seafood3.webp" data-modal-title="Modal Title 6" data-modal-description="This is the modal description for card 6. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus.">
+                    <img src="img/seafood3.webp" alt="Sample Image 6">
+                    <div class="card-content">
+                        <h3>Card Title 6</h3>
+                        <p>This is a description for card 6.</p>
+                    </div>
+                </div>
+                <div class="card" data-title="Card Title 7" data-description="This is a description for card 7."
+                     data-image="img/seafood1.webp" data-modal-title="Modal Title 7" data-modal-description="This is the modal description for card 7. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.">
+                    <img src="img/seafood1.webp" alt="Sample Image 7">
+                    <div class="card-content">
+                        <h3>Card Title 7</h3>
+                        <p>This is a description for card 7.</p>
+                    </div>
+                </div>
+                <div class="card" data-title="Card Title 8" data-description="This is a description for card 8."
+                     data-image="img/seafood2.webp" data-modal-title="Modal Title 8" data-modal-description="This is the modal description for card 8. Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                    <img src="img/seafood2.webp" alt="Sample Image 8">
+                    <div class="card-content">
+                        <h3>Card Title 8</h3>
+                        <p>This is a description for card 8.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal style-left">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="Modal Image">
+                <div class="modal-text">
+                    <h3 id="modal-title"></h3>
+                    <p id="modal-description"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

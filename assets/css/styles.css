@@ -1,0 +1,39 @@
+@import url('reset.css');
+@import url('nav.css');
+@import url('main.css');
+@import url('footer.css');
+@import url('responsive.css');
+@import url('modal.css');
+
+@font-face {
+    font-family: 'RussoOne';
+    src: url('../font/RussoOne-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'RussoOne', Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #333333; /* Темно-серый текст */
+}
+
+body.dark-mode {
+    background-color: #000000;
+    color: #cccccc; /* Светло-серый текст */
+}
+
+/* Убедимся, что все текстовые элементы наследуют цвет от body */
+h1, h2, h3, h4, h5, h6, p, a, li, button, .card-content h3, .card-content p {
+    color: inherit;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: inherit;
+}
