@@ -16,8 +16,8 @@
     margin: auto;
     padding: 20px; /* Добавляем отступы */
     border: 1px solid #888;
-    width: 900px;
-    height: 700px;
+    width: 800px;
+    height: 600px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
