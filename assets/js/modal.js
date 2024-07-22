@@ -5,28 +5,34 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalDescription = document.getElementById('modal-description');
     const closeModal = document.getElementsByClassName('close')[0];
 
-    // Загружаем данные из JSON-файла
-    fetch('modal-content.json')
-        .then(response => response.json())
+    // Загружаем данные из HTML-файла
+    fetch('modals.html')
+        .then(response => response.text())
         .then(data => {
-            const modals = data.modals;
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, 'text/html');
+            const modalsContainer = doc.getElementById('modals-container');
+            const modals = modalsContainer.getElementsByClassName('modal-content');
 
             const cards = document.querySelectorAll('.card');
-            cards.forEach((card, index) => {
+            cards.forEach(card => {
                 card.addEventListener('click', function() {
-                    const modalData = modals[index];
+                    const modalId = card.getAttribute('data-id');
+                    const modalData = [...modals].find(m => m.getAttribute('data-id') === modalId);
 
-                    modalImage.src = modalData.image;
-                    modalTitle.textContent = modalData.title;
-                    modalDescription.innerHTML = modalData.description;
+                    if (modalData) {
+                        modalTitle.innerHTML = modalData.querySelector('h3').innerHTML;
+                        modalImage.src = modalData.querySelector('img').src;
+                        modalDescription.innerHTML = modalData.querySelector('.modal-text').innerHTML;
 
-                    if (document.body.classList.contains('dark-mode')) {
-                        modal.classList.add('dark-mode');
-                    } else {
-                        modal.classList.remove('dark-mode');
+                        if (document.body.classList.contains('dark-mode')) {
+                            modal.classList.add('dark-mode');
+                        } else {
+                            modal.classList.remove('dark-mode');
+                        }
+
+                        modal.style.display = 'block';
                     }
-
-                    modal.style.display = 'block';
                 });
             });
         });
@@ -41,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 
 
 
