@@ -1,31 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('nav ul li a');
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
     const burgerMenu = document.getElementById('burger-menu');
     const navList = document.getElementById('nav-list');
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            if (this.href.startsWith("#")) {
-                event.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(targetId);
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
-
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        document.body.classList.toggle('light-mode');
-
-        if (document.body.classList.contains('dark-mode')) {
+    // Проверка и применение сохраненной темы
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.body.classList.add(savedTheme);
+        if (savedTheme === 'dark-mode') {
             themeIcon.classList.remove('bx-moon');
             themeIcon.classList.add('bx-sun');
-        } else {
+        }
+    } else {
+        document.body.classList.add('light-mode');
+    }
+
+    themeToggle.addEventListener('click', () => {
+        if (document.body.classList.contains('dark-mode')) {
+            document.body.classList.remove('dark-mode');
+            document.body.classList.add('light-mode');
             themeIcon.classList.remove('bx-sun');
             themeIcon.classList.add('bx-moon');
+            localStorage.setItem('theme', 'light-mode');
+        } else {
+            document.body.classList.remove('light-mode');
+            document.body.classList.add('dark-mode');
+            themeIcon.classList.remove('bx-moon');
+            themeIcon.classList.add('bx-sun');
+            localStorage.setItem('theme', 'dark-mode');
         }
     });
 
@@ -33,6 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
         navList.classList.toggle('hidden');
     });
 });
+
+
+
 
 
 
